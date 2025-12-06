@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container center-card">
+  <div class="card hero">
+    <h1>Plan meals. Save recipes. Generate shopping lists.</h1>
+    <p class="muted">A material-designed digest planner built with Flask — teal themed.</p>
+    <p><a class="btn" href="{{ url_for('register') }}">Create account</a> <a class="btn outline" href="{{ url_for('login') }}">Log in</a></p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container center-card">
+  <div class="card wide">
+    <h2>Add Recipe</h2>
+    <form method="post" class="form">
+      {{ form.hidden_tag() }}
+      <div class="form-row">
+        {{ form.title.label }} {{ form.title(class_='input') }}
+      </div>
+      <div class="form-row">
+        {{ form.ingredients.label }} {{ form.ingredients(class_='input', rows=6) }}
+        <div class="muted small">One ingredient per line, format: name | quantity</div>
+      </div>
+      <div class="form-row">
+        {{ form.instructions.label }} {{ form.instructions(class_='input', rows=6) }}
+      </div>
+      <div class="form-row">
+        {{ form.submit(class_='btn primary') }}
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

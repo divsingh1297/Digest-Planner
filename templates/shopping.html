@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="card">
+    <h2>Shopping List</h2>
+    <div class="row">
+      <input id="shopWeek" type="date" value="{{ today }}" class="input">
+      <button id="genShop" class="btn primary">Generate</button>
+    </div>
+    <div id="shoppingResult" class="shopping-list"></div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='shopping_material.js') }}"></script>
+{% endblock %}

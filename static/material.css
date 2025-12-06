@@ -1,0 +1,53 @@
+:root{
+  --teal-500: #009688;
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --muted: #666;
+  --shadow: 0 2px 6px rgba(0,0,0,0.12);
+  --radius: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:Roboto,Arial, sans-serif;color:#222}
+.appbar{height:64px;background:var(--teal-500);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-shadow:0 2px 4px rgba(0,0,0,0.2)}
+.appbar .brand{font-weight:500;margin-left:8px;color:#fff;text-decoration:none;font-size:18px}
+.appbar .appbtn{color:#fff;margin-right:12px;text-decoration:none;padding:8px;border-radius:8px;display:inline-flex;align-items:center}
+.appbar .appbtn:hover{background:rgba(255,255,255,0.08)}
+.main{padding:20px;max-width:1100px;margin:20px auto}
+.container{max-width:1100px;margin:0 auto}
+.card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:16px}
+.card.small{display:flex;align-items:center;justify-content:center;flex-direction:column;padding:18px;text-align:center}
+.grid{display:flex;gap:12px}
+.list{display:flex;flex-direction:column;gap:8px}
+.list-item{padding:8px;border-radius:8px;border:1px solid #eee;background:#fff;display:flex;gap:12px;align-items:center}
+.recipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.recipe-card{background:#fff;border-radius:10px;padding:12px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.recipe-title{font-weight:600;margin-bottom:8px}
+.ingredients{white-space:pre-wrap;background:#f8f8f8;padding:8px;border-radius:8px}
+.center-card{display:flex;justify-content:center;align-items:center;height:70vh}
+.hero{padding:28px;text-align:center}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;background:#fff;color:var(--teal-500);box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.btn.outline{border:1px solid rgba(0,0,0,0.06)}
+.btn.primary{background:var(--teal-500);color:#fff}
+.form{display:flex;flex-direction:column;gap:12px}
+.form-row{display:flex;flex-direction:column;gap:6px}
+.input{padding:10px;border-radius:8px;border:1px solid #e6e6e6;background:#fff}
+.fab{width:56px;height:56px;border-radius:50%;position:fixed;right:24px;bottom:24px;background:var(--teal-500);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.2);border:none;cursor:pointer}
+.chip{display:inline-block;padding:8px 12px;border-radius:16px;background:#f1f1f1}
+/* Planner specific */
+.planner-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.planner-body{display:flex;gap:18px;margin-top:12px}
+.recipes-column{width:30%}
+.week-column{flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.day-card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.day-header{font-weight:600;margin-bottom:8px}
+.draggable-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow:auto;padding-right:6px}
+.recipe-item{padding:10px;border-radius:8px;border:1px solid #eee;background:#fff;cursor:grab}
+.meal-slot{min-height:48px;border-radius:8px;padding:8px;border:1px dashed #e0e0e0;margin-bottom:8px;background:#fafafa}
+.meal-slot.over{border-color:var(--teal-500);background:rgba(0,150,136,0.04)}
+.placed-chip{display:inline-block;padding:6px 10px;border-radius:16px;background:rgba(0,150,136,0.12);color:var(--teal-500);font-weight:500}
+.shopping-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.shopping-item{display:flex;justify-content:space-between;padding:10px;border-radius:8px;background:#fff;border:1px solid #f0f0f0}
+@media(max-width:900px){.planner-body{flex-direction:column}.week-column{grid-template-columns:repeat(1,1fr)}}

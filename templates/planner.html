@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="card">
+    <div class="planner-header">
+      <h2>Weekly Planner</h2>
+      <div>
+        <label for="weekStart">Week start</label>
+        <input id="weekStart" type="date" value="{{ today }}" class="input">
+        <button id="savePlan" class="btn primary">Save Plan</button>
+      </div>
+    </div>
+    <div class="planner-body">
+      <div class="recipes-column">
+        <h3>Your recipes</h3>
+        <div id="recipeList" class="draggable-list">
+          {% for r in recipes %}
+            <div class="recipe-item" draggable="true" data-id="{{ r.id }}" data-title="{{ r.title }}">
+              <div class="drag-title">{{ r.title }}</div>
+              <div class="muted small">{{ r.ingredients.splitlines()[0] if r.ingredients else '' }}</div>
+            </div>
+          {% else %}
+            <p>No recipes. <a href="{{ url_for('add_recipe') }}">Add one</a></p>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="week-column">
+        {% for day in ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'] %}
+          <div class="day-card" data-day="{{ day }}">
+            <div class="day-header">{{ day }}</div>
+            <div class="meal-slot" data-meal="breakfast">Breakfast</div>
+            <div class="meal-slot" data-meal="lunch">Lunch</div>
+            <div class="meal-slot" data-meal="dinner">Dinner</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='planner_material.js') }}"></script>
+{% endblock %}
