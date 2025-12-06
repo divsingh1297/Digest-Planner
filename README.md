@@ -62,18 +62,20 @@ project/
 Getting Started
 Follow these steps to run the project on any OS (Windows, macOS, Linux).
 
-1️ Install Python
+**1️** Install Python
 Ensure Python 3.10+ is installed.
 
 Check version:
 
 python --version
-2 Clone the Repository
+
+**2** Clone the Repository
 git clone https://github.com/<your-username>/digest_planner.git
 cd digest_planner
-3️ Create a Virtual Environment
+
+**3️** Create a Virtual Environment
 python -m venv venv
-4️ Activate the Environment
+**4️** Activate the Environment
 Windows (CMD):
 venv\Scripts\activate
 macOS & Linux:
@@ -81,11 +83,11 @@ source venv/bin/activate
 You’ll see:
 
 (venv)
-5️ Install Dependencies
+**5️** Install Dependencies
 pip install -r requirements.txt
-6️ Run the Application
+**6️** Run the Application
 python app.py
-7️ Open in Browser
+**7️** Open in Browser
 Go to:
 
 http://127.0.0.1:5000
